@@ -10,7 +10,7 @@ import {UserController, PostController} from "./controllers/index.js";
 import cors from "cors";
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGODB_URI || `mongodb+srv://admin:admin123@cluster0.bmesa9y.mongodb.net/proj?retryWrites=true&w=majority`)
   .then(() => {
     console.log("DB Ok")
   }).catch((err) => {
